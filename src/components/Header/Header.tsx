@@ -14,7 +14,10 @@ import { Typography } from '@material-ui/core';
 const useStyles = makeStyles(() =>
   createStyles({
     toolbar: {
-      background: '#2a3048'
+      background: '#2a3048',
+      position: 'fixed',
+      width: '100%',
+      top: 0
     },
     container: {
       maxWidth: '1200px',
@@ -65,11 +68,10 @@ export const Header = (props: any) => {
       </a>
     ))
   )
-
   return (
     <AppBar position='static'>
       <Toolbar className={classes.toolbar}>
-        <div className={classes.container}>
+        <div className={classes.container}> 
           <Grid container>
             <Grid item xs={2}>
               <Link to="/">
