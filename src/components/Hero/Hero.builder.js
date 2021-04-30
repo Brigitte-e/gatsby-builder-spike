@@ -16,6 +16,11 @@ Builder.registerComponent(Hero, {
             allowedFileTypes: ['jpeg', 'jpg', 'png', 'svg'],
             required: true,
             defaultValue: 'https://www.holdenqigong.com/wp-content/uploads/2016/03/lee-sunset-qi-gong.jpg'
-        }
+        },
+        {
+            name: 'height',
+            type: 'number',
+            defaultValue: 500
+        },
     ]
 });

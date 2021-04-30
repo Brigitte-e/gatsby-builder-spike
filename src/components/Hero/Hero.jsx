@@ -9,15 +9,31 @@ export const Hero = props => {
     image,
     title,
     height,
-    darkMode
   } = props;
 
 
   const useStyles = makeStyles(() =>
     createStyles({
-      image: {
-        width: '100vw'
+      box: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh'
       },
+      image: {
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        objectFit: 'cover',
+        width: '100%',
+        height: height ? height : '100%'
+      },
+      title: {
+        zIndex: 9,
+        color: '#fff',
+        maxWidth: '600px',
+        fontSize: '76px'
+      }
     }),
   );
 
@@ -25,11 +41,10 @@ export const Hero = props => {
 
   return (
       <Box
-        style={{ color: darkMode ? 'gray' : 'white' }}
+        className={classes.box}
         textAlign="center"
-        paddingTop={`calc(${height}px/3)`}
       >
-        <Typography variant="h2">{title}</Typography>
+        <Typography className={classes.title} variant="h2">{title}</Typography>
         <Image className={classes.image} image={image} />
       </Box>
   );
