@@ -2,19 +2,21 @@ import * as React from 'react';
 // import { graphql, StaticQuery } from 'gatsby';
 // import { BuilderComponent } from '@builder.io/react';
 import { makeStyles } from '@material-ui/core/styles';
-// import Link from '../components/Link/Link';
 import '../builder-settings';
 
-import theme from '../theme';
+// import theme from '../theme';
 // import { BuilderComponent } from '@builder.io/react';
 
 const useStyles = makeStyles(them => ({
   root: {
-    padding: theme.spacing(1)
+    maxWidth: '100vw',
+    overflowX: 'hidden'
   },
   header: {},
   footer: {},
-  content: {}
+  content: {
+    width: '100vw'
+  }
 }));
 
 // const query = graphql`
